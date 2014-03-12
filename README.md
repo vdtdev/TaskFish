@@ -1,8 +1,9 @@
-== TaskFish ==
+TaskFish
+--------
 
 Task management Chrome application
 
-==== Goal Features ====
+__Goal Features__
 + Chrome-based storage of tasks, including status, title, and description
 + Intuitive navigation of current and completed tasks
 + Task ranking based on numerical order of importance
