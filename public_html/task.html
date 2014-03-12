@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+    TaskFish
+    by Wade Harkins (vdtdev@gmail.com)
+-->
+<html>
+
+    <head>
+        <script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript" src="js/taskData.js"></script>
+        <script type="text/javascript" src="js/ui.js"></script>
+        <link type="text/css" href="css/theme.css" rel="stylesheet"/>
+        <link type="text/css" href="css/fishy/jquery-ui-1.10.3.custom.css" rel="stylesheet"/>
+        <title>TaskFish</title>
+    </head>
+
+    <body>
+        <div class="fish-hr fish-grad-fill"></div>
+
+        <div id="main-tabs">
+            <ul>
+                <li><a href="#tasks-incomplete">Incomplete</a></li>
+                <li><a href="#tasks-complete">Complete</a></li>
+                <li><a href="#tasks-all">All</a></li>
+            </ul>
+            <div id="tasks-incomplete">
+                <ul id="tasks-incomplete-ul" class="fish-list ui-widget-header">
+                    <li class="task">
+                        <input type="checkbox" id="t1-status" class="status" value="o">
+                        <label class="description" for="t1-status">Mow the lawn</label> 
+                    </li>
+                    <li>
+                        <input type="checkbox" id="t2-status" class="status" value="x">
+                        <label class="description" for="t2-status">Buy food</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="tasks-complete">
+                <ul id="tasks-complete-ul" class="fish-list ui-widget-header"></ul>
+            </div>
+            <div id="tasks-all">
+                <ul class="fish-list ui-widget-header"></ul>
+            </div>
+        </div>
+    </body>
+
+</html>

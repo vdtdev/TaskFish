@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "TaskFish",
+	"description": "Task Management Application",
+	"version": "1.0",
+	"icons": {
+		"32": "ui/TaskFish-Icon-32.png",
+		"64": "ui/TaskFish-Icon-64.png",
+		"128": "ui/TaskFish-Icon-128.png",
+		"256": "ui/TaskFish-Icon-256.png"
+		
+		
+	},
+	"author": "vdtdev",
+	"short_name": "TaskFish",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"permissions":["storage"]
+}
