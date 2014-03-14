@@ -115,20 +115,18 @@ var taskData = {
         var com = ((updateFilter === this.Filter.Complete) || (updateFilter === this.Filter.All));
         var inc = ((updateFilter === this.Filter.Complete) || (updateFilter === this.Filter.All));
         var count = 0;
+        
         //    var ids = new Array();
         for (t in this.tasks) {
             var task = this.tasks[t];
             var data = "";
             if ((task.status && com) || (!task.status && inc) || (com && inc)) {
                 data += "<li><input type='checkbox' id='t"
-                        + task.id + "-status' class='status' checked='" + (task.status?"true":"false")+"'>";
+                        + task.id + "-status' class='status'>";
                 data += "<label class='description' for='t" + task.id + "'>"
                         + task.title + "</label></li>";
                 count++;
-                // store id for even generation
-                //if((com && task.status) || (inc && !task.status)){
-//                    ids.push("t"+task.id);
-                //              }
+                
                 completeTasks += (com && task.status) ? data : "";
                 incompleteTasks += (inc && !task.status) ? data : "";
             }
@@ -137,9 +135,14 @@ var taskData = {
             $("#tasks-complete-ul").html(completeTasks);
         if (inc)
             $("#tasks-incomplete-ul").html(incompleteTasks);
-        $(".status").change(function() {
+        $(".status").on("click",function() {
             taskData.update_data();
         });
+        
+        // update state of all tasks
+        for(var t in this.tasks){
+            document.getElementById("t"+t.id+"-status").value=(t.status?"on":"off");
+        }
         return count;
     },
     /**
